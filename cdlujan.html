@@ -1,0 +1,68 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Constantes vitales de las economías Top 15</title>
+  <meta name="description" content="Histórico de las constantes vitales de las economías Top 15 para la asignatura de Data Visualization II del Máster en Data Science & Big Data del centro U-TAD. Spain.">
+  <meta name="author" content="Carlos Luján">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Monitor world's Top'15 economies vital signs.</h1>
+
+        <div id="lead">
+            <p><strong>Where did we come from?</strong> Evolution of total GDP, annual per capita GDP growth, per capita income, life expectancy and armed conflict since the 19th century of the 15 countries with the highest GDP.</p>
+
+            <p>By monitoring these values, our intention is to try to contextualize the historical evolution of these countries. Signs of the country's wealth can be taken from total GDP, annual per capita GDP growth and per capita income. Life expectancy can be used to infer indications of quality of life in that country (quality of healthcare, types of work, regulations on working conditions, etc.). However, many other indicators would be necessary for a more in-depth study of the subject.</p>
+
+            <p>Citizens in these countries live better than before. The increase in wealth seems to be translated into an increase in the quality of life.  In most countries there has been a reduction of the number of armed conflicts in recent decades. The absence of war conflicts allows economies to grow and so improves the lives of citizens in those countries. </p>
+        </div> <!--! end of #lead -->
+        <div>
+            <p id="data_sources"> <strong>Data sources:</strong> 
+                <a href="https://www.gapminder.org/data/">Total GDP (PPP$, inflation-adjusted), income_per_person_long_series, life_expectancy_years and gdp_per_capita_yearly_growth.</a>
+                from
+                <a href="https://www.gapminder.org/">the Gapminder Foundation</a>.
+                <a href="http://www.correlatesofwar.org/data-sets/cow-country-codes">COW country codes</a> and 
+                <a href="http://www.correlatesofwar.org/data-sets/COW-war">COW War Data, 1816 - 2007 (v4.0)</a>
+                from 
+                <a href="http://www.correlatesofwar.org/">the Correlates of War Project.</a>
+            <strong>Resources:</strong> 
+                <a href="https://www.gosquared.com/resources/flag-icons/">Flag icon set from GoSquared.</a>
+                
+                <a href="https://geojson-maps.ash.ms/">Geojson map from geojson-maps.</a>
+            </p>
+            
+        </div>
+        <div id="main">
+
+        <div id="cdlujan_dataviz"> <!-- Our visualization -->
+            <div id="map_charts"></div>
+        </div>
+        </div> <!--! end of #main -->
+        <div id="interactive_help">
+            <p> <strong> Interactive help:</strong> Place the cursor on any country's chart to inspect values. Move it over the years. Move out of the country's chart to continue. One-click will start the visualization from the selected year. Double-click on the map will start the visualization from the begining. 
+            </p>
+        </div>
+    </div> <!--! end of #container -->
+
+    <script type="text/javascript" src="js/cdlujan.js">
+    </script>
+</body>
+</html>

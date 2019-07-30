@@ -1,0 +1,209 @@
+war_name,ccode,name,start_year,end_year,deaths,latitude,longitude
+Franco-Spanish War,230,Spain,1823,1823,600,40,-4
+Franco-Spanish War,220,France,1823,1823,400,46,2
+First Russo-Turkish,365,Russia,1828,1829,50000,60,100
+Mexican-American,70,Mexico,1846,1847,6000,19.42847,-99.12766
+Mexican-American,2,United States,1846,1847,13283,39.76,-98.5
+Austro-Sardinian,325,Italy,1848,1849,3400,42.83333,12.83333
+First Schleswig-Holstein,255,Germany,1848,1849,2500,51.5,10.5
+Roman Republic,220,France,1849,1849,1000,46,2
+La Plata,140,Brazil,1851,1852,500,-10,-55
+Crimean,325,Italy,1855,1856,2200,42.83333,12.83333
+Crimean,220,France,1854,1856,95000,46,2
+Crimean,200,United Kingdom,1854,1856,22000,54.75844,-2.69531
+Crimean,365,Russia,1853,1856,100000,60,100
+Anglo-Persian,200,United Kingdom,1856,1857,500,54.75844,-2.69531
+Italian Unification,325,Italy,1859,1859,2500,42.83333,12.83333
+Italian Unification,220,France,1859,1859,7500,46,2
+First Spanish-Moroccan,230,Spain,1859,1860,4000,40,-4
+Italian-Roman,325,Italy,1860,1860,300,42.83333,12.83333
+Neapolitan,325,Italy,1860,1861,600,42.83333,12.83333
+Franco-Mexican,70,Mexico,1862,1867,12000,19.42847,-99.12766
+Franco-Mexican,220,France,1862,1867,8000,46,2
+Second Schleswig-Holstein,255,Germany,1864,1864,1048,51.5,10.5
+Lopez,140,Brazil,1864,1870,100000,-10,-55
+Naval War,230,Spain,1865,1866,300,40,-4
+Seven Weeks,325,Italy,1866,1866,4000,42.83333,12.83333
+Seven Weeks,255,Germany,1866,1866,10000,51.5,10.5
+Franco-Prussian,255,Germany,1870,1871,44781,51.5,10.5
+Franco-Prussian,220,France,1870,1871,152000,46,2
+Second Russo-Turkish,365,Russia,1877,1878,120000,60,100
+Conquest of Egypt,200,United Kingdom,1882,1882,79,54.75844,-2.69531
+Sino-French,220,France,1884,1885,2100,46,2
+Sino-French,710,China,1884,1885,10000,35,105
+First Sino-Japanese,710,China,1894,1895,10000,35,105
+First Sino-Japanese,740,Japan,1894,1895,5000,35.68536,139.75309
+Spanish-American,230,Spain,1898,1898,775,40,-4
+Spanish-American,2,United States,1898,1898,2910,39.76,-98.5
+Boxer Rebellion,365,Russia,1900,1900,302,60,100
+Boxer Rebellion,740,Japan,1900,1900,622,35.68536,139.75309
+Boxer Rebellion,2,United States,1900,1900,21,39.76,-98.5
+Boxer Rebellion,710,China,1900,1900,2000,35,105
+Boxer Rebellion,200,United Kingdom,1900,1900,34,54.75844,-2.69531
+Boxer Rebellion,220,France,1900,1900,24,46,2
+Sino-Russian,365,Russia,1900,1900,242,60,100
+Sino-Russian,710,China,1900,1900,3758,35,105
+Russo-Japanese,740,Japan,1904,1905,80378,35.68536,139.75309
+Russo-Japanese,365,Russia,1904,1905,71453,60,100
+Second Spanish-Moroccan,230,Spain,1909,1910,2000,40,-4
+Italian-Turkish,325,Italy,1911,1912,6000,42.83333,12.83333
+World War I,365,Russia,1914,1917,1700000,60,100
+World War I,200,United Kingdom,1914,1918,908371,54.75844,-2.69531
+World War I,740,Japan,1914,1918,300,35.68536,139.75309
+World War I,255,Germany,1914,1918,1773700,51.5,10.5
+World War I,220,France,1914,1918,1385000,46,2
+World War I,325,Italy,1915,1918,650000,42.83333,12.83333
+World War I,2,United States,1917,1918,116516,39.76,-98.5
+Estonian Liberation,365,Russia,1918,1920,8000,60,100
+Latvian Liberation,255,Germany,1918,1919,450,51.5,10.5
+Latvian Liberation,365,Russia,1918,1920,8000,60,100
+Latvian Liberation,255,Germany,1919,1919,750,51.5,10.5
+Russo-Polish,365,Russia,1919,1920,60000,60,100
+Franco-Turkish,220,France,1919,1921,5000,46,2
+Manchurian,365,Russia,1929,1929,200,60,100
+Manchurian,710,China,1929,1929,3000,35,105
+Second Sino-Japanese,740,Japan,1931,1933,10000,35.68536,139.75309
+Second Sino-Japanese,710,China,1931,1933,50000,35,105
+Saudi-Yemeni,670,Saudi Arabia,1934,1934,100,25,45
+Conquest of Ethiopia,325,Italy,1935,1936,4000,42.83333,12.83333
+Third Sino-Japanese,710,China,1937,1941,750000,35,105
+Third Sino-Japanese,740,Japan,1937,1941,250000,35.68536,139.75309
+Changkufeng,365,Russia,1938,1938,1200,60,100
+Changkufeng,740,Japan,1938,1938,526,35.68536,139.75309
+Nomonhan,365,Russia,1939,1939,5000,60,100
+Nomonhan,740,Japan,1939,1939,20000,35.68536,139.75309
+World War II,220,France,1940,1941,2500,46,2
+World War II,2,United States,1941,1945,405400,39.76,-98.5
+World War II,200,United Kingdom,1939,1945,418765,54.75844,-2.69531
+World War II,325,Italy,1940,1943,174500,42.83333,12.83333
+World War II,140,Brazil,1944,1945,1000,-10,-55
+World War II,325,Italy,1943,1945,52400,42.83333,12.83333
+World War II,365,Russia,1941,1945,7500000,60,100
+World War II,255,Germany,1939,1945,3500000,51.5,10.5
+World War II,220,France,1939,1945,210824,46,2
+World War II,740,Japan,1941,1945,1740000,35.68536,139.75309
+World War II,710,China,1941,1945,1350000,35,105
+Russo-Finnish,365,Russia,1939,1940,126875,60,100
+Franco-Thai,220,France,1940,1941,700,46,2
+First Kashmir,750,India,1947,1949,2500,22,79
+Korean,710,China,1950,1953,422612,35,105
+Korean,200,United Kingdom,1950,1953,710,54.75844,-2.69531
+Korean,220,France,1951,1953,288,46,2
+Korean,732,South Korea,1950,1953,113248,36.5,127.75
+Korean,2,United States,1950,1953,54487,39.76,-98.5
+Off-shore Islands,710,China,1954,1955,1003,35,105
+Sinai War,200,United Kingdom,1956,1956,22,54.75844,-2.69531
+Soviet Invasion of Hungary,365,Russia,1956,1956,1500,60,100
+IfniWar,230,Spain,1957,1958,122,40,-4
+Taiwan Straits,710,China,1958,1958,300,35,105
+Assam,750,India,1962,1962,1353,22,79
+Assam,710,China,1962,1962,500,35,105
+"Vietnam War, Phase 2",2,United States,1965,1973,58153,39.76,-98.5
+"Vietnam War, Phase 2",732,South Korea,1965,1973,4687,36.5,127.75
+Second Kashmir,750,India,1965,1965,3261,22,79
+"Second Laotian, Phase 2",2,United States,1968,1973,375,39.76,-98.5
+Communist Coalition,2,United States,1970,1971,125,39.76,-98.5
+Bangladesh,750,India,1971,1971,3241,22,79
+Yom Kippur War,670,Saudi Arabia,1973,1973,100,25,45
+Sino-Vietnamese Punitive,710,China,1979,1979,13000,35,105
+Falkland Islands,200,United Kingdom,1982,1982,255,54.75844,-2.69531
+Sino-Vietnamese Border War,710,China,1987,1987,1800,35,105
+Gulf War,2,United States,1991,1991,376,39.76,-98.5
+Gulf War,200,United Kingdom,1991,1991,24,54.75844,-2.69531
+Gulf War,670,Saudi Arabia,1991,1991,44,25,45
+Kargil War,750,India,1999,1999,474,22,79
+Invasion of Iraq,200,United Kingdom,2003,2003,33,54.75844,-2.69531
+Invasion of Iraq,2,United States,2003,2003,140,39.76,-98.5
+First Caucasus,365,Russia,1818,1822,5001,60,100
+Greek Independence,200,United Kingdom,1827,1827,72,54.75844,-2.69531
+Greek Independence,220,France,1827,1827,32,46,2
+Greek Independence,365,Russia,1827,1828,52,60,100
+Miguelite War,200,United Kingdom,1831,1834,92,54.75844,-2.69531
+First Murid War,365,Russia,1830,1832,1001,60,100
+First French Insurrection,220,France,1830,1830,401,46,2
+First Polish,365,Russia,1831,1831,15001,60,100
+First Carlist War,230,Spain,1834,1840,65001,40,-4
+First Carlist War,220,France,1835,1839,7701,46,2
+First Carlist War,200,United Kingdom,1835,1837,2501,54.75844,-2.69531
+Texan,70,Mexico,1835,1836,1501,19.42847,-99.12766
+Third Murid,365,Russia,1836,1852,15001,60,100
+Sabinada Rebellion,140,Brazil,1837,1838,601,-10,-55
+"Second Syrian, Phase 2",200,United Kingdom,1840,1840,15,54.75844,-2.69531
+Second Carlist,230,Spain,1847,1849,3001,40,-4
+Second French Insurrection,220,France,1848,1848,1201,46,2
+Hungarian,365,Russia,1849,1849,14501,60,100
+Puebla War,70,Mexico,1855,1856,601,19.42847,-99.12766
+"Taiping Rebellion, Phase 2",710,China,1860,1866,26001,35,105
+"Taiping Rebellion, Phase 2",200,United Kingdom,1862,1862,26,54.75844,-2.69531
+U.S. Civil War,2,United States,1861,1865,360001,39.76,-98.5
+Second Polish,365,Russia,1863,1864,10001,60,100
+Queretaro,70,Mexico,1867,1867,1501,19.42847,-99.12766
+Paris Commune,220,France,1871,1871,880,46,2
+Third Carlist,230,Spain,1872,1876,7001,40,-4
+Diaz Revolt,70,Mexico,1876,1876,1901,19.42847,-99.12766
+Satsuma Rebellion,740,Japan,1877,1877,7001,35.68536,139.75309
+Zaili-Jinden Revolt,710,China,1891,1891,501,35,105
+Brazil Federalists,140,Brazil,1893,1894,1501,-10,-55
+Brazil Naval,140,Brazil,1893,1894,1001,-10,-55
+Third Brazil-Canudos,140,Brazil,1896,1897,2201,-10,-55
+Second Yaqui War,70,Mexico,1899,1900,101,19.42847,-99.12766
+Bloody Sunday,365,Russia,1905,1906,1501,60,100
+Overthrow of Abd el-Aziz,220,France,1907,1908,201,46,2
+Iranian Constitution War,365,Russia,1909,1909,101,60,100
+Third Mexican,70,Mexico,1910,1914,56251,19.42847,-99.12766
+First Nationalist,710,China,1911,1911,801,35,105
+Fourth Mexican,2,United States,1915,1917,16,39.76,-98.5
+Fourth Mexican,70,Mexico,1914,1920,18751,19.42847,-99.12766
+Russia-Turkestan,365,Russia,1916,1917,351,60,100
+Russian Civil War,740,Japan,1918,1920,1492,35.68536,139.75309
+Russian Civil War,365,Russia,1917,1921,475001,60,100
+Russian Civil War,200,United Kingdom,1918,1920,342,54.75844,-2.69531
+Russian Civil War,2,United States,1918,1920,267,39.76,-98.5
+Russian Civil War,220,France,1918,1919,42,46,2
+Finnish Civil War,255,Germany,1918,1918,951,51.5,10.5
+Finnish Civil War,365,Russia,1918,1918,392,60,100
+Green Rebellion,365,Russia,1920,1921,1701,60,100
+Kronstadt Rebellion,365,Russia,1921,1921,2001,60,100
+Bashmachi in Turkestan,365,Russia,1921,1923,1001,60,100
+Chinese Northern Expedition,710,China,1926,1928,78001,35,105
+Chinese Northern Expedition,740,Japan,1927,1928,492,35.68536,139.75309
+Cristeros Revolt,70,Mexico,1926,1929,6001,19.42847,-99.12766
+Escobar Rebellion,70,Mexico,1929,1929,401,19.42847,-99.12766
+Ikhwan Revolt,670,Saudi Arabia,1929,1930,501,25,45
+"Chinese Civil War, Phase 1",710,China,1930,1936,200001,35,105
+Xinjiang Muslim Revolt,365,Russia,1934,1934,1001,60,100
+Xinjiang Muslim Revolt,710,China,1931,1934,10001,35,105
+Spanish Miners,230,Spain,1934,1934,285,40,-4
+Spanish Civil War,230,Spain,1936,1939,286001,40,-4
+Spanish Civil War,255,Germany,1936,1939,292,51.5,10.5
+Spanish Civil War,325,Italy,1936,1939,3992,42.83333,12.83333
+Greek Civil War,200,United Kingdom,1944,1945,238,54.75844,-2.69531
+Polish Ukrainians,365,Russia,1945,1947,5001,60,100
+Ukrainian Partisans,365,Russia,1945,1947,35001,60,100
+Forest Brethren,365,Russia,1945,1951,14701,60,100
+"Chinese Civil War, Phase 2",710,China,1946,1950,327601,35,105
+Taiwan Revolt,710,China,1947,1947,251,35,105
+Indonesia Darul Islam,850,Indonesia,1953,1953,1701,-5,120
+Tibetan Khamba Rebellion,710,China,1956,1959,4001,35,105
+Indonesian Leftists,850,Indonesia,1956,1962,3701,-5,120
+Vietnam Phase 1,2,United States,1961,1965,507,39.76,-98.5
+Second Laotian Phase 1,2,United States,1964,1968,201,39.76,-98.5
+Dominican Republic,2,United States,1965,1965,28,39.76,-98.5
+First Guatemala,2,United States,1966,1968,29,39.76,-98.5
+First Chad (FROLINAT) Rebellion,220,France,1968,1971,51,46,2
+Naxalite Rebellion,750,India,1970,1971,101,22,79
+Khmer Rouge,2,United States,1971,1973,376,39.76,-98.5
+Dhofar Rebellion Phase 2,200,United Kingdom,1973,1975,36,54.75844,-2.69531
+Second West Papua,850,Indonesia,1976,1978,101,-5,120
+East Timorese War Phase 3,850,Indonesia,1976,1979,1801,-5,120
+First Afghan Mujahideen Uprising,365,Russia,1979,1980,2001,60,100
+Second Chad (Habre Revolt),220,France,1983,1984,192,46,2
+Fourth Lebanese Civil,2,United States,1983,1984,274,39.76,-98.5
+Fourth Lebanese Civil,220,France,1983,1984,96,46,2
+First Sri Lanka Tamil,750,India,1987,1990,1156,22,79
+Kashmir Insurgents,750,India,1990,2005,6001,22,79
+Second Somalia,2,United States,1992,1994,45,39.76,-98.5
+First Chechnya,365,Russia,1994,1996,4001,60,100
+Second Aceh,850,Indonesia,1999,2002,331,-5,120
+Second Chechen,365,Russia,1999,2003,5001,60,100
+Third Aceh,850,Indonesia,2003,2003,151,-5,120
