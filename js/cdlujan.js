@@ -48,7 +48,11 @@ var formatPercentage0 = function(x) {
 }
 
 var formatYears = function(x) {
-        return numberFormat(x) + "y";
+    return d3.format(".2f")(x) + "y";
+}
+
+var formatYears0 = function(x) {
+        return d3.format(".0f")(x) + "y";
     }
     ////////////////////////////////////////////////////////////////////////////
     // Small multiples variables. Vital signs chart.
@@ -882,7 +886,7 @@ var vital_signs_charts = function(data) {
         */
         // small multiples y_axis life expectancy
         y_axis_life_expectancy = d3.axisLeft(y_life_expectancy)
-            .tickFormat(formatYears)
+            .tickFormat(formatYears0)
             .ticks(1);
         svg_map_charts.append("g")
             .attr("class", "y_axis_life_expectancy")
@@ -1360,7 +1364,7 @@ var update_y_population_axis = function(y_population, y_population_new_domain) {
 
 var update_y_life_expectancy_axis = function(y_life_expectancy, y_life_expectancy_new_domain) {
     return d3.axisLeft(y_life_expectancy)
-        .tickFormat(formatYears)
+        .tickFormat(formatYears0)
         .ticks(3)
         .tickSize(4)
         .tickValues([0, d3.max(y_life_expectancy_new_domain)]);
