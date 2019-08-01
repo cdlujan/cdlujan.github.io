@@ -40,7 +40,7 @@ var formatPopulation = function(x) {
 }
 
 var formatPercentage = function(x) {
-    return d3.format(".2s")(x) + "%";
+    return d3.format(".2f")(x) + "%";
 }
 
 var formatYears = function(x) {
@@ -276,7 +276,7 @@ var rank_chart = function(data) {
             .style("font-weight", "normal")
             .style("font-style", "italic")
             .style("font-size", "10px")
-            .text("(converted to international $  ")
+            .text("(converted to international USD  ")
             .append("tspan")
             .attr("y", height - (margin_rank_chart.bottom * 1.1))
             .attr("x", width - margin_rank_chart.right / 2)
@@ -609,7 +609,7 @@ var vital_signs_legend = function() {
         .attr("class", "legend_text")
         .attr("x", sep + ve_legend_width + sep)
         .attr("y", pos_ve_y[1] + ve_legend_height)
-        .text("· Income per person ($).");
+        .text("· Income per person (US$).");
     // gdp_growth_ve
     svg_legend.append("g")
         .attr("class", "g_legend_gdp_growth")
@@ -645,7 +645,7 @@ var vital_signs_legend = function() {
         .attr("class", "legend_text")
         .attr("x", sep + ve_legend_width + sep)
         .attr("y", pos_ve_y[2] + ve_legend_height)
-        .text("· GDP per capita yearly growth.");
+        .text("· GDP per capita yearly growth (%).");
     // conflicts_ve
     svg_legend.append("g")
         .attr("class", "g_conflicts")
