@@ -43,6 +43,10 @@ var formatPercentage = function(x) {
     return d3.format(".2f")(x) + "%";
 }
 
+var formatPercentage0 = function(x) {
+    return d3.format(".0f")(x) + "%";
+}
+
 var formatYears = function(x) {
         return numberFormat(x) + "y";
     }
@@ -609,7 +613,7 @@ var vital_signs_legend = function() {
         .attr("class", "legend_text")
         .attr("x", sep + ve_legend_width + sep)
         .attr("y", pos_ve_y[1] + ve_legend_height)
-        .text("· Income per person (US$).");
+        .text("· Income per person (USD).");
     // gdp_growth_ve
     svg_legend.append("g")
         .attr("class", "g_legend_gdp_growth")
@@ -645,7 +649,7 @@ var vital_signs_legend = function() {
         .attr("class", "legend_text")
         .attr("x", sep + ve_legend_width + sep)
         .attr("y", pos_ve_y[2] + ve_legend_height)
-        .text("· GDP per capita yearly growth (%).");
+        .text("· GDP per capita yearly growth.");
     // conflicts_ve
     svg_legend.append("g")
         .attr("class", "g_conflicts")
@@ -852,7 +856,7 @@ var vital_signs_charts = function(data) {
             .call(x_axis);
         y_axis_gdp_growth = d3.axisLeft(y_gdp)
             .ticks(1)
-            .tickFormat(formatPercentage);
+            .tickFormat(formatPercentage0);
         // small multiples y_axis gdp_growth
         svg_map_charts.append("g")
             .attr("class", "y_axis_gdp_growth")
@@ -1330,7 +1334,7 @@ var update_x_date_axis = function(x_date) {
 var update_y_gdp_growth_axis = function(y_gdp, y_gdp_new_domain) {
     return d3.axisLeft(y_gdp)
         .ticks(3)
-        .tickFormat(formatPercentage)
+        .tickFormat(formatPercentage0)
         .tickSize(4)
         .tickValues([d3.min(y_gdp_new_domain),
             //0, 
