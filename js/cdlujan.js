@@ -36,7 +36,15 @@ var currency_units = function(str) {
 }
 
 var formatPopulation = function(x) {
-        return d3.format(".2s")(x);
+    return d3.format(".2s")(x);
+}
+
+var formatPercentage = function(x) {
+    return d3.format(".2s")(x) + "%";
+}
+
+var formatYears = function(x) {
+        return numberFormat(x) + "y";
     }
     ////////////////////////////////////////////////////////////////////////////
     // Small multiples variables. Vital signs chart.
@@ -842,12 +850,14 @@ var vital_signs_charts = function(data) {
             .attr("id", "x_axis")
             .attr("transform", "translate(0," + height_small + ")")
             .call(x_axis);
-
+        y_axis_gdp_growth = d3.axisLeft(y_gdp)
+            .ticks(1)
+            .tickFormat(formatPercentage);
         // small multiples y_axis gdp_growth
         svg_map_charts.append("g")
             .attr("class", "y_axis_gdp_growth")
             .attr("id", "y_axis_gdp_growth")
-            .call(d3.axisLeft(y_gdp).ticks(1)); // axis configuration should be placed here.
+            .call(y_axis_gdp_growth); // axis configuration should be placed here.
         // small multiples y_axis income_per_person
         y_axis_income = d3.axisLeft(y_income)
             .tickFormat(formatCurrency0)
@@ -868,7 +878,7 @@ var vital_signs_charts = function(data) {
         */
         // small multiples y_axis life expectancy
         y_axis_life_expectancy = d3.axisLeft(y_life_expectancy)
-            .tickFormat(numberFormat)
+            .tickFormat(formatYears)
             .ticks(1);
         svg_map_charts.append("g")
             .attr("class", "y_axis_life_expectancy")
@@ -1122,63 +1132,8 @@ var vital_signs_charts = function(data) {
             .on("mouseout", mouseout)
             .on("mousemove", mousemove)
             .on("click", mouseclick);
-
-
-
     } // @end vital_signs_chart function
 
-var nodes_conflicts;
-
-var get_nodes_conflicts = function() {
-        // 
-        return nested_data.map(function(d, i) {
-            var x_y_map_projection = map_projection([d.values[i].long, d.values[i].lat]);
-            return { "key": d.key, "values": { "x": x_y_map_projection[0], "y": x_y_map_projection[1] } };
-        });
-    } // @end get_nodes function.
-
-var forced_field_simulation_conflicts = function() {
-        // Force field to place dashboards.
-        // - dashboards are attracted to its country long,lat.
-        // - dashboards are repulsed by each other relative to their distance to each other.
-        // - try with no collision.
-        nodes_conflicts = get_nodes_conflicts();
-
-        var height = (height_small + margin_small.top + margin_small.bottom);
-        var width = (width_small + margin_small.left + margin_small.right);
-
-        var force_charge_strength = 0;
-        var force_center_strength = 1;
-        var force_collision_strength = 0.1;
-        var force_collision = height_small_conflicts / 2;
-        var force_field = d3.forceSimulation(nodes)
-            .force("center", d3.forceCenter(width / 2, height / 2))
-            .force("collision",
-                d3.forceCollide()
-                .radius(function(d, i) { return force_collision; })
-                .strength(force_collision_strength))
-            .on("tick", ticked_conflicts);
-    } // @end forced_field_simulation function.
-
-var ticked_conflicts = function() {
-        var height = height_small + margin_small.top + margin_small.bottom;
-        var width = width_small + margin_small.left + margin_small.right;
-
-        var u = d3.select("#svg_map_bg")
-            .selectAll('dash_boards')
-            .data(nodes);
-
-        // Move dashboards.
-        var u = d3.select("#svg_map_bg").selectAll('.svg_dash_board')
-            .data(nodes);
-
-        u.enter()
-            .merge(u)
-            .attr("x", function(d, i) { return d.x - width / 2; })
-            .attr("y", function(d, i) { return d.y - height / 2; });
-
-        u.exit().remove();
-    } // @end ticked function.
 
 ////////////////////////////////////////////////////////////////////////////////
 // Zoom functions.
@@ -1350,8 +1305,6 @@ var update_rank_chart = function() {
     } // @ end of update_rank_chart function
 
 var update_rank_chart_focus = function() {
-    // TODO:
-
     // Titles
     var year_text = d3.select("#svg_rank_chart").select("#rank_chart_year");
 
@@ -1377,6 +1330,7 @@ var update_x_date_axis = function(x_date) {
 var update_y_gdp_growth_axis = function(y_gdp, y_gdp_new_domain) {
     return d3.axisLeft(y_gdp)
         .ticks(3)
+        .tickFormat(formatPercentage)
         .tickSize(4)
         .tickValues([d3.min(y_gdp_new_domain),
             //0, 
@@ -1402,7 +1356,7 @@ var update_y_population_axis = function(y_population, y_population_new_domain) {
 
 var update_y_life_expectancy_axis = function(y_life_expectancy, y_life_expectancy_new_domain) {
     return d3.axisLeft(y_life_expectancy)
-        //.tickFormat(formatCurrency0)
+        .tickFormat(formatYears)
         .ticks(3)
         .tickSize(4)
         .tickValues([0, d3.max(y_life_expectancy_new_domain)]);
@@ -1530,24 +1484,6 @@ var update_vital_signs_charts_population = function(curr_date, filtered_data) {
                     }));
 
         });
-    /*
-    // Update zero line.
-    d3.select("#cdlujan_dataviz").select("#map_charts")
-        .selectAll(".income_zero_line")
-        .transition()
-            .duration(150)
-                .attr("d", function(d){
-                    return d3.line()
-                                .x(function(d) { return x_date(d.date); })
-                                .y(function(d) { return y_income(0); })
-                                (d.values.filter(function(d) {
-                                        return (d.date - curr_date) <= 0;
-                                    })
-                                    .filter(function(d) {
-                                        return (d.date - parseTime(START_YEAR)) >= 0;
-                                    }))
-                });
-    */
 }
 
 var update_vital_signs_charts_life_expectancy = function(curr_date, filtered_data) {
@@ -1728,7 +1664,6 @@ var update_vital_signs_charts = function() {
 
         update_vital_signs_charts_conflicts(curr_date);
 
-
         update_vital_signs_focus();
     } // @end of update_vital_signs_charts function.
 
@@ -1761,7 +1696,7 @@ var update_vital_signs_focus_gdp_growth = function(curr_date) {
             var idx = bisectDate(d.values, curr_date);
             var value = d.values[i, idx].gdp_per_capita_yearly_growth;
             if ((curr_date - d.values[i, idx].date) >= 0) {
-                result = numberFormat(value);
+                result = formatPercentage(value);
             }
             return result;
         });
@@ -1859,7 +1794,7 @@ var update_vital_signs_focus_life_expectancy = function(curr_date) {
             var idx = bisectDate(d.values, curr_date);
             var value = d.values[i, idx].life_expectancy;
             if (value > 0 && ((curr_date - d.values[i, idx].date) >= 0)) {
-                result = numberFormat(value);
+                result = formatYears(value);
             }
             return result;
         });
