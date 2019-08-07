@@ -1,270 +1,350 @@
 .container {
-  width: 1360px;
+    width: 1360px;
 }
 
 h1 {
-  font-size: 26px;
-  padding: 0px 0 5px 0;
-  line-height: 1.2em;
-  color: #000;
-  margin-bottom: 0px;
+    font-size: 26px;
+    padding: 0px 0 5px 0;
+    line-height: 1.2em;
+    color: #000;
+    margin-bottom: 0px;
 }
 
 #lead {
-  clear: both;
-  width: 1360px;
+    clear: both;
+    width: 1360px;
 }
 
 #lead p {
-  color: #444;
-  font-family: Georgia,Palatino,serif;
-  font-size: 1.0em;
-  line-height: 1.4em;
+    color: #444;
+    font-family: Georgia, Palatino, serif;
+    font-size: 1.0em;
+    line-height: 1.4em;
 }
 
 #interactive_help {
     font-style: italic;
     font-size: 11px;
 }
-#data_sources, #resources {
+
+#data_sources,
+#resources {
     font-style: italic;
     font-size: 11px;
 }
+
 * {
     font-family: Strait !important;
     color: #666666 !important;
 }
+
 text {
     font-size: 12px;
     fill: #666666;
 }
-.x_axis_rank_chart path, .x_axis_rank_chart line {
+
+.current_year_indicator {
+    font-style: italic;
+    font-family: Strait;
+    font-size: 48px;
+    opacity: 0.6;
+}
+
+.x_axis_rank_chart path,
+.x_axis_rank_chart line {
     stroke: #666666;
 }
+
 .x_axis_rank_chart text {
     font-size: 11px;
 }
-.y_axis_rank_chart path, .y_axis_rank_chart line {
+
+.y_axis_rank_chart path,
+.y_axis_rank_chart line {
     stroke: #666666;
 }
+
 .y_axis_rank_chart text {
     font-size: 10px;
 }
+
 .rank_chart_year {
-    font-size:      12px;
-    font-style:     italic;
+    font-size: 12px;
+    font-style: italic;
 }
-.x_axis path, .x_axis line {
+
+.x_axis path,
+.x_axis line {
     stroke: #666666;
 }
+
 .x_axis text {
     font-size: 11px;
 }
-.y_axis_gdp_growth path, .y_axis_gdp_growth line {
+
+.y_axis_gdp_growth path,
+.y_axis_gdp_growth line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_gdp_growth text {
     font-size: 10px;
 }
-.y_axis_income path, .y_axis_income line {
+
+.y_axis_income path,
+.y_axis_income line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_income text {
     font-size: 10px;
 }
-.y_axis_population path, .y_axis_population line {
+
+.y_axis_population path,
+.y_axis_population line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_population text {
     font-size: 10px;
 }
-.y_axis_life_expectancy path, .y_axis_life_expectancy line {
+
+.y_axis_life_expectancy path,
+.y_axis_life_expectancy line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_life_expectancy text {
     font-size: 10px;
 }
-.y_axis_conflict_deaths path, .y_axis_conflict_deaths line {
+
+.y_axis_conflict_deaths path,
+.y_axis_conflict_deaths line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_conflict_deaths text {
     font-size: 10px;
 }
+
 .gdp_growth_zero_line {
     fill: none;
     opacity: 0.8;
     stroke: darkgrey;
     stroke-width: 1.1;
 }
+
 .income_zero_line {
     fill: none;
     opacity: 0.8;
     stroke: darkgrey;
     stroke-width: 1.1;
 }
+
 .life_expectancy_zero_line {
     fill: none;
     opacity: 0.8;
     stroke: darkgrey;
     stroke-width: 1.1;
 }
+
 .gdp_growth_marker {
     fill: deepskyblue;
     stroke: white;
     stroke-opacity: 0.5;
     stroke-width: 1.5;
 }
+
 .gdp_growth_value {
-    font-size:      10px;
+    font-size: 10px;
 }
+
 .gdp_growth {
-    stroke: deepskyblue; /* dodgerblue */
+    stroke: deepskyblue;
+    /* dodgerblue */
     stroke-opacity: 0.75;
     stroke-width: 1.2;
     fill: none;
     clip-path: url(#clip);
 }
+
 .legend_gdp_growth {
-    stroke: deepskyblue; /* dodgerblue */
+    stroke: deepskyblue;
+    /* dodgerblue */
     stroke-opacity: 0.75;
     stroke-width: 1.2;
     fill: none;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .income_per_person_value {
-    font-size:      10px;
+    font-size: 10px;
 }
+
 .income_per_person_marker {
-    fill: lime; /* limegreen */
+    fill: lime;
+    /* limegreen */
     stroke: white;
     stroke-opacity: 0.5;
     stroke-width: 1.5;
 }
+
 .income_per_person {
-    fill: lime; /* limegreen */
+    fill: lime;
+    /* limegreen */
     fill-opacity: 0.5;
-    stroke: limegreen; /* limegreen */
+    stroke: limegreen;
+    /* limegreen */
     stroke-opacity: 0.8;
     stroke-width: 1.2;
     clip-path: url(#clip);
 }
+
 .legend_income_per_person {
-    fill: lime; /* limegreen */
+    fill: lime;
+    /* limegreen */
     fill-opacity: 0.5;
-    stroke: limegreen; /* limegreen */
+    stroke: limegreen;
+    /* limegreen */
     stroke-opacity: 0.8;
     stroke-width: 1.2;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .population_value {
-    font-size:      10px;
+    font-size: 10px;
 }
+
 .population_marker {
     stroke: white;
     stroke-opacity: 0.5;
     stroke-width: 1.5;
 }
+
 .population {
     fill-opacity: 0.5;
     stroke-opacity: 0.8;
     stroke-width: 1.2;
     clip-path: url(#clip);
 }
+
 .legend_population {
     fill-opacity: 0.5;
     stroke-opacity: 0.8;
     stroke-width: 1.2;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .life_expectancy_value {
-    font-size:      10px;
+    font-size: 10px;
 }
+
 .life_expectancy_marker {
-    fill: orange; /* darkorange */
+    fill: orange;
+    /* darkorange */
     stroke: white;
     stroke-opacity: 0.5;
     stroke-width: 1.5;
 }
+
 .life_expectancy {
-    fill: orange; /* darkorange */
+    fill: orange;
+    /* darkorange */
     fill-opacity: 0.5;
-    stroke: orange; /* darkorange */
+    stroke: orange;
+    /* darkorange */
     stroke-opacity: 0.8;
     stroke-width: 1.2;
     clip-path: url(#clip);
 }
+
 .legend_life_expectancy {
-    fill: orange; /* darkorange */
+    fill: orange;
+    /* darkorange */
     fill-opacity: 0.5;
-    stroke: orange; /* darkorange */
+    stroke: orange;
+    /* darkorange */
     stroke-opacity: 0.8;
     stroke-width: 1.2;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .title_year {
-    font-size:      12px;
-    font-style:     italic;
+    font-size: 12px;
+    font-style: italic;
 }
-.y_axis_conflict_deaths path, .y_axis_conflict_deaths line {
+
+.y_axis_conflict_deaths path,
+.y_axis_conflict_deaths line {
     stroke: #666666;
     stroke-opacity: 0.5;
 }
+
 .y_axis_conflict_deaths text {
     font-size: 10px;
 }
+
 .conflict_deaths_zero_line {
     fill: none;
     opacity: 0.8;
     stroke: darkgrey;
     stroke-width: 1.1;
 }
+
 .conflict_name {
-    font-size:      9px;
-    fill:           #666666;
-    text-anchor:    middle;
-    text-align:     center;
-    font-style:     italic;
+    font-size: 9px;
+    fill: #666666;
+    text-anchor: middle;
+    text-align: center;
+    font-style: italic;
 }
+
 .conflict_rect {
     fill: red;
     fill-opacity: 0.8;
     stroke: red;
     stroke-opacity: 0.8;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .legend_conflict_rect {
     fill: red;
     fill-opacity: 0.8;
     stroke: red;
     stroke-opacity: 0.8;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .legend_background {
     opacity: 0.1;
-    rx : 5;
-    ry : 5;
+    rx: 5;
+    ry: 5;
 }
+
 .legend_text {
-    font-size:      9px;
-    fill:           #666666;
-    font-style:     italic;
+    font-size: 9px;
+    fill: #666666;
+    font-style: italic;
 }
+
 .cdlujan {
-    font-size:      9px;
-    fill:           #666666;
-    font-style:     italic;
+    font-size: 9px;
+    fill: #666666;
+    font-style: italic;
 }
+
+
 /*
 .chart {
   float: left;

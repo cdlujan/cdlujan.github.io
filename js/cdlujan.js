@@ -495,10 +495,6 @@ var current_year_indicator = function() {
             .attr("text-anchor", "end")
             .attr("y", margin_map.top * 2)
             .attr("x", width_map + margin_map.left)
-            .style("font-style", "italic")
-            .style("font-family", "Strait")
-            .style("font-size", "48px")
-            .style("opacity", 0.6)
             .text(function() { return yearFormat(CURR_YEAR); });
     } // @end current_year_indicator function.
 
@@ -1294,6 +1290,8 @@ var update_rank_chart = function() {
             })
             .each(function() {
                 d3.select(this).selectAll("line")
+                    .transition()
+                    .duration(150)
                     .attr("x2", function(d) {
                         var idx = bisectDate(d.values, curr_date);
                         return x_rank_chart(d.values[idx].year_total_gdp);
@@ -1302,6 +1300,8 @@ var update_rank_chart = function() {
                     .attr("y1", function(d) { return y_rank_chart(d.key); })
                     .attr("y2", function(d) { return y_rank_chart(d.key); })
                 d3.select(this).selectAll("circle")
+                    .transition()
+                    .duration(150)
                     .attr("cx", function(d) {
                         var idx = bisectDate(d.values, curr_date);
                         return x_rank_chart(d.values[idx].year_total_gdp);
@@ -1314,7 +1314,10 @@ var update_rank_chart = function() {
 
 var update_rank_chart_focus = function() {
     // Titles
-    var year_text = d3.select("#svg_rank_chart").select("#rank_chart_year");
+    var year_text = d3.select("#svg_rank_chart")
+        .select("#rank_chart_year")
+        .transition()
+        .duration(150);
 
     if (PAUSED == true) {
         //titles.text(function(d, i){ return ("Population: "+numberFormat(d.values[i, bisectDate(d.values, curr_date)].population)+"·10⁶"); });
@@ -1616,6 +1619,8 @@ var update_vital_signs_charts_conflicts = function(curr_date) {
             return y;
         });
     d3.selectAll(".conflict_name")
+        .transition()
+        .duration(150)
         .attr("display", function(d) {
             var result = "none";
 
@@ -1660,8 +1665,8 @@ var update_vital_signs_charts = function() {
 
         d3.select("#cdlujan_dataviz").select("#map_charts")
             .selectAll("#x_axis")
-            //.transition()
-            //    .duration(150)
+            .transition()
+            .duration(150)
             .call(x_axis);
 
         // Update charts to current year.
@@ -1874,6 +1879,8 @@ var update_vital_signs_focus = function() {
 
 var update_year = function() {
     d3.select("#current_year_indicator")
+        .transition()
+        .duration(150)
         .text(function() { return yearFormat(CURR_YEAR); });
 }
 
