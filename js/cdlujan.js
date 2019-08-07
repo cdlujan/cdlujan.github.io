@@ -12,7 +12,7 @@ var START_YEAR = 1801; //1900;
 var CURR_YEAR = START_YEAR - 1;
 var PAUSED = false;
 var FINISHED = false;
-var SPEED = 1000;
+var SPEED = 1000 * 1.05;
 
 var bisectDate = d3.bisector(function(d, x) { return d.date - x; }).left;
 var numberFormat = d3.format(".2f");
