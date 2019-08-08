@@ -1238,19 +1238,33 @@ var resort_rank_chart = function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Update chart functions.
 var update_x_rank_chart_axis = function(x_rank_chart, x_rank_chart_new_domain) {
+    var curr_date = parseTime(CURR_YEAR);
+
+    /*
+    var sorted_curr_gdps = dataset
+        .filter(function(d) {
+            return (d.date - curr_date) == 0;
+        })
+        .map(function(d) { return d.year_total_gdp; })
+        .sort(function(a, b) {
+            return (a - b);
+        });
+    */
     var num_ticks = 4;
     var tick_values = d3.range(num_ticks + 1)
         .map(function(i) { // quantile intervals.
             return i / num_ticks;
         })
         .map(function(q) {
+            // equidist intervals. For quantile intervals use sorted_curr_gdps
             return d3.quantile(x_rank_chart_new_domain, q);
         });
+
     tick_values[0] = 0;
 
     return d3.axisBottom(x_rank_chart)
         .tickFormat(formatCurrency)
-        .ticks(3)
+        .ticks(num_ticks)
         .tickSize(4)
         .tickValues(tick_values);
 }
