@@ -350,7 +350,7 @@ var map_bg_chart = function() {
             .attr("fill", "#b8b8b8")
             .attr("d", d3.geoPath().projection(map_projection))
             .style("stroke", "none")
-            .style("opacity", .3);
+            .style("opacity", .2);
         // Ecuator reference line.
         svg_map
             .append("line")
@@ -361,7 +361,7 @@ var map_bg_chart = function() {
             .attr("y1", map_projection([0, 0])[1])
             .attr("y2", map_projection([0, 0])[1])
             .style("stroke", "silver")
-            .style("stroke-opacity", 0.5)
+            .style("stroke-opacity", 0.15)
             .style("stroke-width", 1.5)
 
         // Circles for each country's center.
@@ -1022,8 +1022,8 @@ var vital_signs_charts = function(data) {
             .attr("id", function(d) { return "conflict_deaths_zero_line_" + d.key; })
             .attr("x1", 0)
             .attr("x2", width_small_conflicts)
-            .attr("y1", y_conflicts(0))
-            .attr("y2", y_conflicts(0));
+            .attr("y1", y_conflicts(0) + 0.5)
+            .attr("y2", y_conflicts(0) + 0.5);
 
         // year ~ conflict : rectangle + text.
         var g_country_conflicts = g_conflicts.selectAll("#g_country_conflict")
@@ -1131,7 +1131,8 @@ var vital_signs_charts = function(data) {
             .attr("class", "overlay")
             .attr("width", width_small + 3)
             .attr("height", height_small)
-            .attr("opacity", 0.2)
+            .attr("opacity", 0.3)
+            .attr("fill", "#666666")
             .on("mouseover", mouseover)
             .on("mouseout", mouseout)
             .on("mousemove", mousemove)
@@ -1346,8 +1347,10 @@ var update_map_charts = function() {
 }
 
 var update_x_date_axis = function(x_date) {
+    var num_ticks = 4
+
     return d3.axisBottom(x_date)
-        .ticks(4)
+        .ticks(num_ticks)
         .tickFormat(formatAsYear)
         .tickSize(4);
 }
@@ -1674,8 +1677,8 @@ var update_vital_signs_charts = function() {
         var x_date_new_domain = d3.extent(filtered_data.map(function(d) { return d.date }));
 
         x_date.domain(x_date_new_domain);
-        // x_axis = update_x_date_axis(x_date);
-        x_axis.scale(x_date);
+        x_axis = update_x_date_axis(x_date);
+        //x_axis.scale(x_date);
 
         d3.select("#cdlujan_dataviz").select("#map_charts")
             .selectAll("#x_axis")
