@@ -350,7 +350,7 @@ var map_bg_chart = function() {
             .attr("fill", "#b8b8b8")
             .attr("d", d3.geoPath().projection(map_projection))
             .style("stroke", "none")
-            .style("opacity", .2);
+            .style("opacity", 0.2);
         // Ecuator reference line.
         svg_map
             .append("line")
@@ -1239,9 +1239,9 @@ var resort_rank_chart = function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Update chart functions.
 var update_x_rank_chart_axis = function(x_rank_chart, x_rank_chart_new_domain) {
+    /*
     var curr_date = parseTime(CURR_YEAR);
 
-    /*
     var sorted_curr_gdps = dataset
         .filter(function(d) {
             return (d.date - curr_date) == 0;
